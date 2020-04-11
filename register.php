@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +14,7 @@ session_start();
     }
     function showText(obj)
     {
+
       if(obj.value=='other')
       {
         document.getElementById('depart').style.display='inline';
@@ -204,7 +202,5 @@ session_start();
 </div>
 </body>
 </html>
-<?php
-// Close the session
 session_close();
 ?>
