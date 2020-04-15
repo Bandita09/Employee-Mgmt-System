@@ -1,9 +1,5 @@
-<?php include "../auth/auth.php" ?>
+<?php include("../auth/auth.php"); ?>
 
-<?php
-// Start the session
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,6 +62,7 @@ session_start();
     <?php
       if(isset($_SESSION["success"])){
         echo $_SESSION["success"];
+        unset($_SESSION["success"]);
       }
     ?>
     <div class="row">
@@ -231,7 +228,3 @@ session_start();
 </div>
 </body>
 </html>
-<?php
-// Destroy the session
-session_destroy();
-?>

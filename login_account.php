@@ -24,7 +24,7 @@ if($count == 1){
 
 	$session_id = session_id();
 	$_SESSION['auth'] = $session_id;
-
+	
 	$role = $row['role'];
 	if($role == 'Admin'){
 		header('Location:admin/dashboard.php');
