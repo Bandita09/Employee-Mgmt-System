@@ -1,14 +1,11 @@
 <?php include "../auth/auth.php" ?>
 
-<?php
-// Start the session
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Employee Registration form</title>
+  <title>Edit User Details</title>
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <script src="../js/jquery.min.js"></script>  
   <script>
@@ -50,7 +47,7 @@ session_start();
       }
       if(passlength <= 5){
         alert('Please enter a minimum 5 digit password');
-        return false;
+        retu rn false;
       }
 
     }
@@ -62,17 +59,24 @@ session_start();
  <!-- Ending File here -->
 <div class="display-5 text-primary text-uppercase"><strong><center>Employee Registration Form</center></strong></div> 
 <div class="container bg-gray">
-  <form class="form-horizontal" method="post" action="insert-user.php" onsubmit=" return formValidation();">
+  <form class="form-horizontal" method="post" action="update-user.php" onsubmit=" return formValidation();">
     <?php
       if(isset($_SESSION["success"])){
         echo $_SESSION["success"];
       }
     ?>
+    <?php 
+    $user_id = $_GET['id'];
+    $query = "SELECT * from employee where id = '$user_id'";
+    $result = mysqli_query($conn,$query);
+    $data = mysqli_fetch_array($result);
+     ?>
+    <input type="hidden" name="user_id" value="<?php echo $user_id;?>">
     <div class="row">
       <div class="col-md-12">
       <div class="form-group">
         <strong for="name">Name:</strong>
-        <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter full name">
+        <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter full name" value="<?php echo $data['name'] ?>">
       </div>
     </div>
     </div>
@@ -130,18 +134,26 @@ session_start();
   <div class="col-md-4">
     <div class="form-group">
       <strong>Department:</strong>
-       <input type="radio" id="depart" name="depart" value="Web Technology">
+       <input type="radio" id="depart" name="depart" value="Web Technology" <?php if($data['department']='Web Technology'){
+          echo "checked";
+       } ?>>
         <strong for="webtech">Web Technology</strong>
-        <input type="radio" id="depart" name="depart" value="seo">
+        <input type="radio" id="depart" name="depart" value="seo" <?php if($data['department']='seo'){
+          echo "checked";
+       } ?>>
         <strong for="seo">SEO</strong>        
       </div>
     </div>
     <div class="col-md-4">
       <div class="form-group">
           <strong>Role:</strong>
-          <input type="radio" id="role" name="role" value="Admin">
+          <input type="radio" id="role" name="role" value="Admin" <?php if($data['role']=='Admin'){
+          echo "checked";
+       } ?>>
           <strong for="admin">Admin</strong>
-          <input type="radio" id="role" name="role" value="Employee">
+          <input type="radio" id="role" name="role" value="Employee" <?php if($data['role']=='Employee'){
+          echo "checked";
+       } ?>>>
           <strong for="employee">Employee</strong>
       </div>
     </div>
@@ -185,7 +197,7 @@ session_start();
     <div class="col-md-4">
   <div class="form-group">
     <strong for="mothername">Email address</strong>
-    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="<?php echo $data['email'];?>">
     <small id="emailHelp" class="form-text text-muted">We will never share your email with anyone else.</small>
   </div>
 </div>
@@ -215,7 +227,7 @@ session_start();
 <div class="row">
   <div class="col">
     <div class="form-group">
-      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" name="submit" class="btn btn-primary">Update</button>
     </div>
   </div>
 </div>
@@ -231,7 +243,3 @@ session_start();
 </div>
 </body>
 </html>
-<?php
-// Destroy the session
-session_destroy();
-?>
