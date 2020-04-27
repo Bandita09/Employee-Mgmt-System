@@ -8,10 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm bg-primary navbar-light">
+	<nav class="navbar navbar-expand-sm bg-info navbar-light fixed-top">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="navbar-brand" href=".">Employee Management System<sup><i class="fa fa-trademark"></i></sup></a>
+			<a class="navbar-brand text-light" href=".">Employee Management System
+					<sup>
+						<i class="fa fa-trademark"></i>
+					</sup>
+				</a>
 			</li>
 		</ul>
 	</nav>
