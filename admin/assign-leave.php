@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Assign Task</title>
+  <title>Assign Leave</title>
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <script src="../js/jquery.min.js"></script>  
@@ -20,7 +20,7 @@
         unset($_SESSION["success"]);
       }
     ?>
-    <legend><h2><u>Assign Task</u></h2><a href="alltask.php" type="button" class="btn btn-primary">All Tasks</a></legend>
+    <legend><h2><u>Assign Leave To Employees</u></h2><a href="alltask.php" type="button" class="btn btn-primary">Leave</a></legend>
    <!-- left box -->
   <div class="row">
     <div class="col-md-3" >
@@ -41,10 +41,26 @@
         <?php } ?>
       </div>
     </div>
-    <div class="col-md-9">  
-      <div class="form-group" style="background-color: #d9d9d9;padding:15px;">
-        <label class="col-lg-12 col-md-12 col-xs-12"><b>Message:</b></label>
-        <textarea name="message" maxlength="1000" cols="96" rows="10"></textarea>
+    <div class="col-md-9" id="leave_details"> 
+        <div class="form-group">
+          <label class="col-lg-3"><b>Valid From:</b></label> 
+            <input type="date" name="validFrom" placeholder="dd/mm/yyyy">
+        </div> 
+      <div class="form-group"> 
+        <label class="col-lg-3"><b>Valid To:</b></label>
+          <input type="date" name="validTo" placeholder="dd/mm/yyyy">
+      </div>  
+      <div class="form-group">
+        <label class="col-lg-3"><b>Casual Leave:</b></label>
+        <input type="text" name="c_leave">
+      </div>      
+      <div class="form-group">  
+        <label class="col-lg-3"><b>Sick Leave:</b></label>
+        <input type="text" name="s_leave">
+      </div>      
+      <div class="form-group">  
+        <label class="col-lg-3"><b>Earned Leave:</b></label>
+        <input type="text" name="e_leave">
       </div>
     </div>
   </div>
