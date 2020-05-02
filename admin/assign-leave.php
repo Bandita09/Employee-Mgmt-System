@@ -8,10 +8,10 @@
   <script src="../js/jquery.min.js"></script>    
 </head>
 <body>
-  <!-- Including header file here -->
+<div class="container">
+    <!-- Including header file here -->
   <?php include "header.php"; ?>
  <!-- Ending File here --> 
-<div class="container">
   <form class="form-horizontal" method="post" action="insert-task.php" onsubmit=" return formValidation();">
     <?php
       if(isset($_SESSION["success"])){
