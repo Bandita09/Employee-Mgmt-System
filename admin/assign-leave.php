@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="container">
-    <!-- Including header file here -->
-  <?php include "header.php"; ?>
- <!-- Ending File here --> 
+  <!-- Including header file here -->
+    <?php include "header.php"; ?>
+  <!-- Ending File here --> 
   <form class="form-horizontal" method="post" action="insert-task.php" onsubmit=" return formValidation();">
     <?php
       if(isset($_SESSION["success"])){
