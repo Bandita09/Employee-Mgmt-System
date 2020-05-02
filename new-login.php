@@ -13,7 +13,7 @@
       <div class="text-center mb-8">
         <a class="text-dark display-4" href="./new-login.php" style="text-decoration: none;">EMS<sup><i class="fa fa-trademark"></i></sup></a>
         <h1 class="h3 mb-3 font-weight-normal">Employee Management System</h1>
-        <p>Sign in using <span class="font-weight-bold">Email id</span> and <span class="font-weight-bold">Password</span>. Alternatively, <a href="./register.php">Click here to Register</a></p>
+        <p>Sign in using <span class="font-weight-bold">Email id</span> and <span class="font-weight-bold">Password</span>. Alternatively, <a href="./new-register.php">Click here to Register</a></p>
       </div>
 
       <div class="form-label-group">
