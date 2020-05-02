@@ -19,11 +19,12 @@ $query = "SELECT * from employee where email= '$email' AND password = '$password
 $result = mysqli_query($conn,$query);
 $count = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result);
-
+ 
 if($count == 1){
 
 	$session_id = session_id();
 	$_SESSION['auth'] = $session_id;
+	$_SESSION['id'] = $row['id'];
 	
 	$role = $row['role'];
 	if($role == 'Admin'){

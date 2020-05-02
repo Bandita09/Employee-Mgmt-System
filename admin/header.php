@@ -16,14 +16,14 @@
       <li class="nav-item active">
         <a class="nav-link" href="dashboard.php">Dashboard</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="register.php">Register</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="task.php">Task</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="leave.php">Leave</a>
+        <a class="nav-link" href="assign-leave.php">Leave</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

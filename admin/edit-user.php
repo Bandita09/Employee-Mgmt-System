@@ -39,6 +39,11 @@
       }
       if(email == ''){
         alert('Please Enter your email id');
+
+    }
+</script>
+</head>
+<body>
         return false;
       }
       if(password == ''){
@@ -49,11 +54,6 @@
         alert('Please enter a minimum 5 digit password');
         retu rn false;
       }
-
-    }
-</script>
-</head>
-<body>
   <!-- Including header file here -->
   <?php include "header.php"; ?>
  <!-- Ending File here -->
