@@ -1,0 +1,24 @@
+.bg-glass-5{
+	background-color: rgba(255, 255, 255, .05)!important;
+}
+.bg-glass-10{
+	background-color: rgba(255, 255, 255, .10)!important;
+}
+.bg-glass-15{
+	background-color: rgba(255, 255, 255, .15)!important;
+}
+.bg-glass-20{
+	background-color: rgba(255, 255, 255, .20)!important;
+}
+.bg-glass-25{
+	background-color: rgba(255, 255, 255, .25)!important;
+}
+.bg-glass-50{
+	background-color: rgba(255, 255, 255, .50)!important;
+}
+.bg-glass-75{
+	background-color: rgba(255, 255, 255, .75)!important;
+}
+.bg-glass-100{
+	background-color: rgba(255, 255, 255, .100)!important;
+}
