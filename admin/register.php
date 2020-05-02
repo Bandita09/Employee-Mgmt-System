@@ -40,6 +40,7 @@
         alert('Please Enter your email id');
         return false;
       }
+      
       if(password == ''){
         alert('Please Enter your password');
         return false;
