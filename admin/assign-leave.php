@@ -3,8 +3,8 @@
 <html>
 <head>
   <title>Assign Leave</title>
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href ="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href ="../css/style.css">
   <script src="../js/jquery.min.js"></script>    
 </head>
 <body>
@@ -64,12 +64,10 @@
     </div>
   </div>
     <div class="col-md-12 col-lg-12" style="margin-top: 10px;">
-      
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-      
+     
      </div>
-  </div>
-
-</form>
+  </form>
+</div>
 </body>
 </html>
